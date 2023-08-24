@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Puzzle Challenge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Puzzle Challenge!</h1>
+    <p>Click on the correct links to solve the puzzle.</p>
+
+    <ul>
+        <li><a href="#" id="link1">Link 1</a></li>
+        <li><a href="#" id="link2">Link 2</a></li>
+        <li><a href="#" id="link3">Link 3</a></li>
+    </ul>
+
+    <div id="message" style="display: none;">
+        <h2>Congratulations!</h2>
+        <p>You got it Booga!</p>
+    </div>
+
+    <script>
+        var solvedLinks = 0;
+        
+        function checkSolution() {
+            if (solvedLinks === 3) {
+                document.getElementById("message").style.display = "block";
+            }
+        }
+
+        document.getElementById("link1").addEventListener("click", function() {
+            solvedLinks++;
+            checkSolution();
+        });
+
+        document.getElementById("link2").addEventListener("click", function() {
+            solvedLinks++;
+            checkSolution();
+        });
+
+        document.getElementById("link3").addEventListener("click", function() {
+            solvedLinks++;
+            checkSolution();
+        });
+    </script>
+</body>
+</html>
